@@ -131,6 +131,11 @@
 	brightnessctl
 	zip
 	unzip
+	iwd
+	lm_sensors
+	pamixer
+	brightnessctl
+	playerctl
     ];
   };
 

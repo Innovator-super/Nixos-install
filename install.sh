@@ -7,3 +7,4 @@ sudo nixos-rebuild switch
 chmod +x ~/.config/hypr/start.sh
 mkdir ~/Images/Wallpaper
 home-manager switch
+oh-my-posh font install ubuntu
