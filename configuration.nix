@@ -131,11 +131,11 @@
 	brightnessctl
 	zip
 	unzip
-	iwd
-	lm_sensors
 	pamixer
-	brightnessctl
-	playerctl
+	networkmanagerapplet
+	libnotify
+	nerd-fonts.ubuntu
+	cava
     ];
   };
 
@@ -212,4 +212,22 @@ environment.systemPackages = with pkgs; [
 	pkgs.xdg-desktop-portal-hyprland 
 	pkgs.xdg-desktop-portal-gtk 
   ];
+  fonts = {
+  enableDefaultPackages = true;
+  packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    # Указываем конкретные Nerd Fonts вместо старого nerdfonts.override
+    nerd-fonts.ubuntu-mono
+    nerd-fonts.ubuntu
+  ];
+  fontconfig = {
+    defaultFonts = {
+      monospace = [ "UbuntuMono Nerd Font Mono" ];
+      sansSerif = [ "Ubuntu Nerd Font" ];
+    };
+  };
+};
+  programs.nm-applet.enable = true;
 }
